@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = 'build/gempa.ino.bin'
+elf = 'build/gempa.ino.elf'
