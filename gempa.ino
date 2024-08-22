@@ -79,12 +79,13 @@ void loop()
       }
 
       // Ambil data gempa terkini dari JSON
-      const String tanggal = doc["Infogempa"]["gempa"]["Tanggal"].as<String>();
-      const String jam = doc["Infogempa"]["gempa"]["Jam"].as<String>();
-      const String magnitude = doc["Infogempa"]["gempa"]["Magnitude"].as<String>();
-      const String lokasi = doc["Infogempa"]["gempa"]["Wilayah"].as<String>();
-      const String kedalaman = doc["Infogempa"]["gempa"]["Kedalaman"].as<String>();
-      const String potensi = doc["Infogempa"]["gempa"]["Potensi"].as<String>();
+      const auto infoGempa = doc["infogempa"]["gempa"];
+      const String tanggal = infoGempa["Tanggal"].as<String>();
+      const String jam = infoGempa["Jam"].as<String>();
+      const String magnitude = infoGempa["Magnitude"].as<String>();
+      const String lokasi = infoGempa["Wilayah"].as<String>();
+      const String kedalaman = infoGempa["Kedalaman"].as<String>();
+      const String potensi = infoGempa["Potensi"].as<String>();
 
       // Cek apakah gempa ini baru
       const String waktuGempa = tanggal + " " + jam;
